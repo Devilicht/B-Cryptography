@@ -1,4 +1,4 @@
-# cryptography
+# B-cryptography
 é um programa em C++ que implementa uma funcionalidade básica de criptografia de arquivos e diretórios. Ele utiliza as bibliotecas <iostream>, <fstream>, <dirent.h>, <sys/stat.h> e <cstring> para manipulação de arquivos, diretórios e strings.
 
 ## Features
