@@ -1,13 +1,13 @@
 # B-cryptography
-é um programa em C++ que implementa uma funcionalidade básica de criptografia de arquivos e diretórios. Ele utiliza as bibliotecas <iostream>, <fstream>, <dirent.h>, <sys/stat.h> e <cstring> para manipulação de arquivos, diretórios e strings.
+B-cryptography is a C++ program that implements basic file and directory encryption functionality. It uses the libraries <iostream>, <fstream>, <dirent.h>, <sys/stat.h>, and <cstring> for file, directory, and string manipulation.
+
 
 ## Features
+- main: An example usage of the encryptDirectory and encryptFile functions is presented. The program encrypts the contents of a specified directory and a specific file by calling the functions with the appropriate paths.
 
-- main: é apresentado um exemplo de uso das funções encryptDirectory e encryptFile. O programa criptografa o conteúdo de um diretório especificado e também de um arquivo específico, chamando as funções com os caminhos adequados.
+- encryptFile: This function takes the path of a file as a parameter and encrypts the contents of the file. It opens the original file in read mode and creates a temporary file in write mode. Then, it reads each byte of the original file, increments the value of that byte by 1, and writes the encrypted byte to the temporary file. After the process is complete, the original file is closed, and the temporary file is renamed to replace the original file.
 
-- encryptFile: ecebe o caminho de um arquivo como parâmetro e realiza a criptografia do conteúdo do arquivo. Para isso, o programa abre o arquivo original em modo de leitura e cria um arquivo temporário em modo de escrita. Em seguida, ele lê cada byte do arquivo original, incrementa o valor desse byte em 1 e escreve o byte criptografado no arquivo temporário. Ao final do processo, o arquivo original é fechado e o arquivo temporário é renomeado para substituir o arquivo original.
-
-- encryptDirectory: recebe o caminho de um diretório como parâmetro e realiza a criptografia de todos os arquivos encontrados nesse diretório e em seus subdiretórios. Para isso, o programa utiliza as funções opendir e readdir para percorrer as entradas (arquivos e subdiretórios) no diretório especificado. Em cada iteração, o programa verifica se a entrada é um diretório ou um arquivo. Se for um diretório, a função encryptDirectory é chamada recursivamente para criptografar os arquivos dentro desse diretório. Se for um arquivo, a função encryptFile é chamada para criptografar o arquivo.
+- encryptDirectory: This function takes the path of a directory as a parameter and encrypts all the files found in that directory and its subdirectories. It uses the opendir and readdir functions to iterate over the entries (files and subdirectories) in the specified directory. In each iteration, the program checks if the entry is a directory or a file. If it is a directory, the encryptDirectory function is called recursively to encrypt the files within that directory. If it is a file, the encryptFile function is called to encrypt the file.
 
 ## How to use
-Para usar basta simplesmente adicionar o caminho como parametro ao chamar a função na main, depois compilar e rodar.
+To use B-cryptography, simply add the path as a parameter when calling the function in the main function. Then, compile and run the program.
